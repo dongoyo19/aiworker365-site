@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIWorker365 — AI automation for small businesses</title>
+<meta name="description" content="AIWorker365 builds practical AI automations for small businesses: lead follow-up, support, reporting and ops workflows. Free 20-minute audit.">
+<meta property="og:title" content="AIWorker365 — AI automation for small businesses">
+<meta property="og:description" content="Cut busywork with practical AI automations built for small businesses.">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#fff;--fg:#14181f;--muted:#5a6472;--line:#e4e8ee;--brand:#2563eb;--brand-d:#1d4ed8;--soft:#f4f7fb;--ok:#059669}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1116;--fg:#eef1f5;--muted:#9aa5b4;--line:#242b36;--soft:#151a22}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:inherit}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:800;text-decoration:none}.logo span{color:var(--brand)}
+nav{display:flex;gap:18px;align-items:center;font-size:14px}nav a{text-decoration:none;color:var(--muted)}
+.lang{background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-weight:700;font-size:13px;cursor:pointer}
+.lang:hover{border-color:var(--brand)}
+.btn{display:inline-block;background:var(--brand);color:#fff!important;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600;border:0;cursor:pointer;font-size:15px}
+.btn:hover{background:var(--brand-d)}.btn.alt{background:transparent;color:var(--fg)!important;border:1px solid var(--line)}
+section{padding:64px 0}h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:12px 0 16px}h2{font-size:clamp(26px,3.5vw,34px);margin:6px 0 12px}
+.eyebrow{color:var(--brand);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.lead{color:var(--muted);font-size:18px;max-width:680px}.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.grid{display:grid;gap:18px;margin-top:28px}.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg)}.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0 0 10px;color:var(--muted)}
+.card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+.soft{background:var(--soft)}.note{font-size:13px;color:var(--muted)}
+.flow{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:8px;max-width:520px}
+.flow li{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--bg);font-size:15px}.flow b{color:var(--brand);margin-right:8px}
+.price{font-size:38px;font-weight:800;margin:6px 0}.price small{font-size:14px;font-weight:500;color:var(--muted)}
+.tag{display:inline-block;background:var(--brand);color:#fff;font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;margin-bottom:8px}
+.card.pop{border:2px solid var(--brand)}.card li::marker{color:var(--ok)}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin:8px 0 0}
+form{display:grid;gap:12px;max-width:560px;margin-top:20px}label{font-size:14px;font-weight:600;display:grid;gap:4px}
+input,select,textarea{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg)}
+.about{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+.avatar{width:96px;height:96px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:38px;font-weight:800}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+#privacy{font-size:14px;color:var(--muted)}#privacy h3{color:var(--fg)}
+@media(max-width:640px){nav .hide{display:none}.about{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top">AI<span>Worker</span>365</a>
+<nav>
+<a class="hide" href="#services" data-es="Servicios">Services</a>
+<a class="hide" href="#process" data-es="Proceso">Process</a>
+<a class="hide" href="#pricing" data-es="Precios">Pricing</a>
+<a class="hide" href="#about" data-es="Acerca de">About</a>
+<a class="hide" href="#faq" data-es="Preguntas">FAQ</a>
+<button class="lang" id="langBtn" type="button" aria-label="Switch language / Cambiar idioma">ES</button>
+<a class="btn" data-book href="#audit" data-es="Auditoría gratis">Book free audit</a>
+</nav>
+</div></header>
+
+<main id="top">
+<section><div class="wrap">
+<div class="eyebrow" data-es="Automatización con IA para negocios locales y pequeños">AI automation for local &amp; small businesses</div>
+<h1 data-es="Deja de hacer trabajo repetitivo a mano. Que lo hagan las automatizaciones.">Stop doing busywork by hand. Let automations do it.</h1>
+<p class="lead" data-es="Construyo automatizaciones prácticas con IA para pequeños negocios: seguimiento de clientes, mensajes, reportes y facturación, usando las herramientas que ya tienes. Sin necesidad de un equipo de TI.">I build practical AI automations for small businesses: lead follow-up, customer messages, reporting, and invoicing, using the tools you already have. No big IT team needed.</p>
+<div class="ctas"><a class="btn" data-book href="#audit" data-es="Agenda una auditoría gratis de 20 min">Book a free 20-min audit</a><a class="btn alt" data-wa href="#" data-es="Escríbeme por WhatsApp">Chat on WhatsApp</a></div>
+<p class="note" style="margin-top:16px" data-es="Especialmente útil para tiendas, restaurantes, clínicas, bienes raíces y otros negocios de servicios donde los dueños y el personal hacen demasiadas tareas manuales.">Especially useful for retail, restaurants, clinics, real estate and other service businesses where owners and staff juggle too many manual tasks.</p>
+<div class="grid g4" style="margin-top:36px">
+<div class="card"><h3 data-es="Meta: 10–30 h">Goal: 10–30 h</h3><p data-es="de trabajo manual eliminado por semana (objetivo, depende de tus procesos)">of manual work removed per week (target, depends on your processes)</p></div>
+<div class="card"><h3 data-es="2–4 semanas">2–4 weeks</h3><p data-es="tiempo típico para la primera automatización funcionando">typical time to the first working automation</p></div>
+<div class="card"><h3 data-es="Tus herramientas">Your tools</h3><p data-es="Funciona con Gmail, Sheets, WhatsApp, Slack, Notion, Shopify y más">Works with Gmail, Sheets, WhatsApp, Slack, Notion, Shopify and more</p></div>
+<div class="card"><h3 data-es="Tú apruebas">You approve</h3><p data-es="Nada se activa hasta que lo hayas revisado">Nothing goes live until you've reviewed it</p></div>
+</div>
+<h3 style="margin-top:40px" data-es="Ejemplo de flujo: del prospecto al CRM">Example workflow: lead to CRM</h3>
+<p class="note" data-es="Ejemplo ilustrativo de cómo se ve una automatización típica, no un resultado de un cliente.">Illustrative example of what a typical build looks like, not a client result.</p>
+<ol class="flow">
+<li><b>1</b><span data-es="Llega un nuevo prospecto desde el formulario de tu sitio">New lead arrives from your website form</span></li>
+<li><b>2</b><span data-es="La IA evalúa su interés y ordena los datos del contacto">AI scores intent and tidies the contact data</span></li>
+<li><b>3</b><span data-es="Se crea el contacto y la oportunidad en tu CRM u hoja de cálculo">Contact and deal are created in your CRM or sheet</span></li>
+<li><b>4</b><span data-es="Se redacta un seguimiento personalizado para tu aprobación">A personalized follow-up is drafted for your approval</span></li>
+<li><b>5</b><span data-es="Recibes una alerta con el siguiente paso">You get an alert with the next action</span></li>
+</ol>
+</div></section>
+
+<section id="services" class="soft"><div class="wrap">
+<div class="eyebrow" data-es="Servicios">Services</div>
+<h2 data-es="Automatizaciones prácticas, no &quot;transformación con IA&quot; vaga">Practical automations, not vague "AI transformation"</h2>
+<p class="lead" data-es="Flujos concretos que eliminan trabajo repetitivo, construidos en semanas.">Concrete workflows that remove repetitive work, built in weeks.</p>
+<div class="grid g3">
+<div class="card"><h3 data-es="Ventas y seguimiento">Sales &amp; lead follow-up</h3><p data-es="Captura prospectos, evalúalos, actualiza tu CRM y envía seguimientos a tiempo.">Capture leads, score them, update your CRM and send timely follow-ups.</p><ul><li data-es="Formularios web al CRM">Website forms to CRM</li><li data-es="Calificación de prospectos con IA">AI lead scoring</li><li data-es="Redacción de seguimientos">Follow-up drafting</li></ul></div>
+<div class="card"><h3 data-es="Atención al cliente">Customer support</h3><p data-es="Responde preguntas comunes, canaliza mensajes y redacta respuestas para los casos difíciles.">Answer common questions, route messages and draft replies for the hard cases.</p><ul><li data-es="Clasificación de correo y WhatsApp">Inbox &amp; WhatsApp triage</li><li data-es="Asistentes de preguntas frecuentes">FAQ assistants</li><li data-es="Resúmenes de tickets">Ticket summaries</li></ul></div>
+<div class="card"><h3 data-es="Operaciones y reportes">Ops &amp; reporting</h3><p data-es="Reemplaza el caos de hojas de cálculo con reportes y recordatorios automáticos.">Replace spreadsheet chaos with automatic reports and reminders.</p><ul><li data-es="Resúmenes semanales de indicadores">Weekly KPI summaries</li><li data-es="Recordatorios de facturas">Invoice reminders</li><li data-es="Sincronización entre herramientas">Data sync between tools</li></ul></div>
+<div class="card"><h3 data-es="Asistentes internos">Internal assistants</h3><p data-es="Ayudantes de IA para propuestas, procedimientos, notas de reuniones y búsqueda en tus documentos.">AI helpers for proposals, SOPs, meeting notes and searching your documents.</p><ul><li data-es="Notas de reuniones">Meeting notes</li><li data-es="Ayuda con procedimientos (SOP)">SOP helpers</li><li data-es="Borradores de propuestas">Proposal drafts</li></ul></div>
+<div class="card"><h3 data-es="Contenido de marketing">Marketing content</h3><p data-es="Convierte una idea en borradores para varios canales, con un paso de revisión antes de publicar.">Turn one idea into drafts for several channels, with a review step before anything is published.</p><ul><li data-es="Guías de contenido">Content briefs</li><li data-es="Borradores para redes">Social drafts</li><li data-es="Esquemas de blog">Blog outlines</li></ul></div>
+<div class="card"><h3 data-es="Integraciones a medida">Custom integrations</h3><p data-es="Conecta las herramientas que ya pagas en un solo flujo confiable.">Connect the tools you already pay for into one reliable flow.</p><ul><li data-es="Sin código + código a medida">No-code + custom code</li><li data-es="Conexiones API seguras">Secure API connections</li><li data-es="Pasos de aprobación humana">Human approval steps</li></ul></div>
+</div></div></section>
+
+<section id="process"><div class="wrap">
+<div class="eyebrow" data-es="Cómo funciona">How it works</div>
+<h2 data-es="De la primera llamada a una automatización funcionando en unas 2–4 semanas">From first call to working automation in about 2–4 weeks</h2>
+<div class="grid g4">
+<div class="card"><h3 data-es="1. Auditoría gratis">1. Free audit</h3><p data-es="20 minutos para identificar tus mayores pérdidas de tiempo y estimar las horas ahorradas.">20 minutes to map your biggest time sinks and estimate hours saved.</p></div>
+<div class="card"><h3 data-es="2. Plan">2. Roadmap</h3><p data-es="Un plan priorizado con herramientas, costo y retorno esperado.">A prioritized plan with tools, cost and expected return.</p></div>
+<div class="card"><h3 data-es="3. Construcción">3. Build</h3><p data-es="Diseño, conecto y pruebo todo con tus herramientas reales. Tú apruebas antes del lanzamiento.">I design, connect and test it with your real tools. You approve before launch.</p></div>
+<div class="card"><h3 data-es="4. Entrega">4. Hand-off</h3><p data-es="Documentación y una llamada de capacitación para que tu equipo pueda operarlo.">Documentation and a training call so your team can run it.</p></div>
+</div></div></section>
+
+<section id="pricing" class="soft"><div class="wrap">
+<div class="eyebrow" data-es="Precios">Pricing</div>
+<h2 data-es="Paquetes claros, cotización fija">Clear packages, fixed quotes</h2>
+<p class="lead" data-es="Estos son precios de partida. Tu auditoría gratis termina con una cotización fija, sin sorpresas en la factura.">These are starting prices. Your free audit ends with a fixed quote, so there are no surprise invoices.</p>
+<div class="card" style="margin-top:20px;border-color:var(--brand)" data-es="<b>Oferta para clientes fundadores:</b> mis primeros 3 clientes tendrán 30% de descuento en cualquier paquete, a cambio de comentarios honestos y permiso para compartir los resultados si quedas satisfecho."><b>Founding client offer:</b> I'm taking my first 3 clients at 30% off any package, in exchange for honest feedback and permission to share the results if you're happy.</div>
+<div class="grid g3">
+<div class="card"><h3>Starter</h3><div class="price">$750 <small data-es="pago único">one-time</small></div><p data-es="Una automatización de alto impacto para empezar.">One high-impact automation to get started.</p><ul><li data-es="1 flujo de automatización">1 automation workflow</li><li data-es="Auditoría y plan incluidos">Audit and roadmap included</li><li data-es="Hasta 3 herramientas conectadas">Up to 3 connected tools</li><li data-es="2 semanas de soporte tras el lanzamiento">2 weeks of support after launch</li><li data-es="Documentación + llamada de capacitación">Documentation + training call</li></ul><p style="margin-top:14px"><a class="btn" data-book href="#audit" data-es="Empezar con Starter">Start with Starter</a></p></div>
+<div class="card pop"><span class="tag" data-es="Más popular">Most popular</span><h3>Growth</h3><div class="price">$1,500 <small data-es="instalación">setup</small></div><p data-es="Luego $300/mes de monitoreo y mejoras. Ideal si quieres automatizar varios procesos.">Then $300/month for monitoring and improvements. Best when you want several processes automated.</p><ul><li data-es="Hasta 3 automatizaciones conectadas">Up to 3 connected automations</li><li data-es="Tiempo de construcción prioritario">Priority build timeline</li><li data-es="Soporte por correo / WhatsApp">Email / WhatsApp support</li><li data-es="Llamada mensual de optimización">Monthly optimization call</li><li data-es="Resumen sencillo de resultados">Simple performance summary</li></ul><p style="margin-top:14px"><a class="btn" data-book href="#audit" data-es="Elegir Growth">Choose Growth</a></p></div>
+<div class="card"><h3>Scale</h3><div class="price">$600 <small data-es="por mes">per month</small></div><p data-es="Socio de automatización continuo. Incluye hasta 10 horas de construcción y soporte al mes.">Ongoing automation partner. Includes up to 10 hours of build and support time per month.</p><ul><li data-es="Lista de trabajo priorizada">Prioritized workflow backlog</li><li data-es="Integraciones personalizadas avanzadas">Advanced custom integrations</li><li data-es="Monitoreo y correcciones">Monitoring and fixes</li><li data-es="Respuesta en 1 día hábil">Replies within 1 business day</li><li data-es="Revisión estratégica trimestral">Quarterly strategy review</li></ul><p style="margin-top:14px"><a class="btn" data-book href="#audit" data-es="Hablemos de Scale">Talk about Scale</a></p></div>
+</div>
+<p class="note" style="margin-top:16px" data-es="Precios en USD. Las suscripciones de software de terceros (CRM, plataformas de automatización, uso de IA) son aparte y las cobran esos proveedores.">Prices in USD. Third-party software subscriptions (CRM, automation platforms, AI usage) are separate and billed by those providers.</p>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="eyebrow" data-es="Acerca de">About</div>
+<div class="about">
+<div class="avatar" aria-hidden="true">E</div>
+<div><h2 style="margin-top:0" data-es="Hola, soy Esau">Hi, I'm Esau</h2>
+<p class="lead" style="margin:0" data-es="Trabajo en operaciones de retail, así que sé de primera mano cuánto tiempo pierden los equipos pequeños en seguimientos manuales, hojas de cálculo y tareas administrativas repetitivas. Creé AIWorker365 para construir automatizaciones simples y confiables que te devuelvan ese tiempo. Cuando contactas al negocio, hablas directamente conmigo.">I work in retail operations, so I know firsthand how much time small teams lose to manual follow-ups, spreadsheets and repetitive admin. I started AIWorker365 to build simple, reliable automations that give that time back. When you contact the business, you talk directly to me.</p></div>
+</div></div></section>
+
+<section id="faq" class="soft"><div class="wrap">
+<div class="eyebrow" data-es="Preguntas frecuentes">FAQ</div>
+<h2 data-es="Preguntas comunes">Common questions</h2>
+<details><summary data-es="¿Necesitamos un equipo técnico?">Do we need a technical team?</summary><p data-es="No. Si sabes usar correo, WhatsApp o una hoja de cálculo, puedes operar lo que construyo, y te capacito para ello.">No. If you can use email, WhatsApp or a spreadsheet, you can run what I build, and I train you on it.</p></details>
+<details><summary data-es="¿Con qué herramientas trabajan?">Which tools do you work with?</summary><p data-es="Gmail/Outlook, Slack, HubSpot, Notion, Google Sheets, Shopify, Zapier/Make, WhatsApp Business y APIs a medida. Si tiene integración o API, normalmente se puede conectar.">Gmail/Outlook, Slack, HubSpot, Notion, Google Sheets, Shopify, Zapier/Make, WhatsApp Business and custom APIs. If it has an integration or API, it can usually be connected.</p></details>
+<details><summary data-es="¿Mis datos están seguros?">Is our data safe?</summary><p data-es="Uso accesos con los mínimos permisos necesarios, documento cada integración y no usaré tus datos privados para entrenar modelos públicos sin tu autorización por escrito. Revisa la sección de privacidad más abajo.">I use least-privilege access, document every integration, and won't use your private data to train public models without your written approval. See the privacy section below.</p></details>
+<details><summary data-es="¿Qué tan rápido veremos resultados?">How fast can we see results?</summary><p data-es="La mayoría de las primeras automatizaciones toman de 2 a 4 semanas después de la auditoría. Las más simples pueden ser más rápidas.">Most first automations take 2–4 weeks after the audit. Simple ones can be faster.</p></details>
+<details><summary data-es="¿Qué pasa si una automatización falla?">What if an automation breaks?</summary><p data-es="Starter incluye 2 semanas de soporte tras el lanzamiento. Growth y Scale incluyen monitoreo y correcciones continuas.">Starter includes 2 weeks of post-launch support. Growth and Scale include ongoing monitoring and fixes.</p></details>
+<details><summary data-es="¿Podemos empezar con un solo proceso?">Can we start with just one process?</summary><p data-es="Sí, y lo recomiendo. Elige el flujo que más te duele, comprueba el valor y luego amplía.">Yes, and I recommend it. Pick the most painful workflow, prove the value, then expand.</p></details>
+</div></section>
+
+<section id="audit"><div class="wrap">
+<div class="eyebrow" data-es="Auditoría de automatización gratis">Free automation audit</div>
+<h2 data-es="Cuéntame dónde se acumula el trabajo">Tell me where work piles up</h2>
+<p class="lead" data-es="Una llamada de 20 minutos. Te llevas una lista corta de automatizaciones, las horas estimadas que ahorrarías y una cotización fija si hay buen ajuste.">A 20-minute call. You leave with a shortlist of automations, estimated hours saved, and a fixed quote if it's a good fit.</p>
+<div class="ctas"><a class="btn" data-book href="#audit" data-es="Agendar llamada">Book a call</a><a class="btn alt" data-wa href="#">WhatsApp</a><a class="btn alt" data-mail href="#" data-es="Correo">Email</a></div>
+<p class="note" style="margin-top:12px" data-es="O envía el formulario de abajo. Respondo en 1 día hábil.">Or send the form below. I reply within 1 business day.</p>
+<form id="leadForm">
+<label><span data-es="Tu nombre">Your name</span><input name="name" required></label>
+<label><span data-es="Correo de trabajo">Work email</span><input name="email" type="email" required></label>
+<label><span data-es="Empresa">Company</span><input name="company"></label>
+<label><span data-es="Tamaño del equipo">Team size</span><select name="size"><option value="" data-es="Selecciona…">Select…</option><option data-es="1–5 personas">1–5 people</option><option data-es="6–20 personas">6–20 people</option><option data-es="21–50 personas">21–50 people</option><option data-es="51–200 personas">51–200 people</option><option data-es="Más de 200 personas">200+ people</option></select></label>
+<label><span data-es="Lo que más tiempo me quita">Biggest time sink</span><select name="sink"><option value="" data-es="Selecciona…">Select…</option><option data-es="El seguimiento de prospectos es lento o inconsistente">Lead follow-up is slow or inconsistent</option><option data-es="La atención al cliente toma demasiado tiempo">Customer support takes too much time</option><option data-es="Los reportes / la administración son manuales">Reporting / admin is manual</option><option data-es="Muchas herramientas que no se comunican entre sí">Too many tools that don't talk to each other</option><option data-es="Necesito IA para contenido / propuestas / documentos">Need AI for content / proposals / docs</option><option data-es="Otro / aún no estoy seguro">Other / not sure yet</option></select></label>
+<label><span data-es="¿Algo más? (opcional)">Anything else? (optional)</span><textarea name="notes" rows="3"></textarea></label>
+<button class="btn" type="submit" data-es="Solicitar auditoría gratis">Request free audit</button>
+<p class="note" id="formMsg" data-es="Al enviar, aceptas que puedo contactarte sobre esta solicitud. Sin listas de spam.">By submitting, you agree I may contact you about this request. No spam lists.</p>
+</form>
+</div></section>
+
+<section id="privacy" class="soft"><div class="wrap">
+<h3 data-es="Privacidad y términos (resumen)">Privacy &amp; terms (summary)</h3>
+<p data-es="<b>Información que recopilo:</b> solo lo que envías por el formulario, correo o WhatsApp (nombre, correo, empresa, detalles del proyecto). <b>Cómo la uso:</b> para responder tu solicitud y prestar los servicios que pidas. No vendo tu información. <b>Datos de clientes:</b> se accede a ellos solo con tu permiso, con los mínimos permisos necesarios, y no se usan para entrenar modelos públicos de IA sin tu autorización por escrito. <b>Contacto:</b> pídeme en cualquier momento que elimine tus datos. <b>Servicios:</b> el alcance, precio y plazo se acuerdan en una cotización escrita antes de empezar; los resultados dependen de tus procesos y herramientas y no están garantizados."><b>Information I collect:</b> only what you send through the form, email or WhatsApp (name, email, company, project details). <b>How I use it:</b> to reply to your request and deliver services you ask for. I don't sell your information. <b>Client data:</b> accessed only with your permission, with least-privilege access, and not used to train public AI models without your written approval. <b>Contact:</b> ask me anytime to delete your data. <b>Services:</b> scope, price and timeline are agreed in a written quote before work begins; results depend on your processes and tools and are not guaranteed.</p>
+<p class="note" data-es="Haz que un profesional revise esto antes de usarlo como tu política legal.">Have this reviewed by a professional before relying on it as your legal policy.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div><b>AI<span style="color:var(--brand)">Worker</span>365</b><br><span data-es="Automatización con IA para pequeños negocios.">AI automation for small businesses.</span></div>
+<div><a data-mail href="#"></a><br><a href="#privacy" data-es="Privacidad y términos">Privacy &amp; terms</a></div>
+<div>© 2026 AIWorker365</div>
+</div></footer>
+
+<script>
+/* ====== EDIT THESE ====== */
+var CONFIG = {
+  email: "hello@aiworker365.com",      // set up a real mailbox on your domain first
+  whatsapp: "526862325702",            // international format, digits only
+  calendarUrl: "",                     // paste your Calendly / Cal.com link; empty = fall back to email
+  formEndpoint: ""                     // optional Formspree/Basin URL; empty = form sends by email
+};
+/* ======================== */
+(function(){
+  var T={
+    en:{
+      title:"AIWorker365 — AI automation for small businesses",
+      desc:"AIWorker365 builds practical AI automations for small businesses: lead follow-up, support, reporting and ops workflows. Free 20-minute audit.",
+      btn:"ES",
+      waText:"Hi AIWorker365 — I'd like a free automation audit for my business.",
+      bookSubj:"Book free automation audit — AIWorker365",
+      bookBody:"Hi,\n\nI'd like to book a 20-minute free automation audit call.\n\nPreferred days/times:\n\nTimezone:\n\nThanks",
+      inqSubj:"AIWorker365 inquiry",
+      formSubj:"Audit request — ",
+      lName:"Name: ",lEmail:"Email: ",lCo:"Company: ",lSize:"Team size: ",lSink:"Biggest time sink: ",lNotes:"Notes: ",
+      ok:"Thanks! I'll reply within 1 business day.",
+      err:"Something went wrong. Please email "+CONFIG.email+" or use WhatsApp."
+    },
+    es:{
+      title:"AIWorker365 — Automatización con IA para pequeños negocios",
+      desc:"AIWorker365 construye automatizaciones prácticas con IA para pequeños negocios: seguimiento de clientes, soporte, reportes y operaciones. Auditoría gratis de 20 minutos.",
+      btn:"EN",
+      waText:"Hola AIWorker365 — me gustaría una auditoría de automatización gratis para mi negocio.",
+      bookSubj:"Agendar auditoría de automatización gratis — AIWorker365",
+      bookBody:"Hola,\n\nMe gustaría agendar una llamada de auditoría de automatización gratis de 20 minutos.\n\nDías/horarios preferidos:\n\nZona horaria:\n\nGracias",
+      inqSubj:"Consulta AIWorker365",
+      formSubj:"Solicitud de auditoría — ",
+      lName:"Nombre: ",lEmail:"Correo: ",lCo:"Empresa: ",lSize:"Tamaño del equipo: ",lSink:"Lo que más tiempo quita: ",lNotes:"Notas: ",
+      ok:"¡Gracias! Te respondo en 1 día hábil.",
+      err:"Algo salió mal. Escríbeme a "+CONFIG.email+" o usa WhatsApp."
+    }
+  };
+  var lang="en";
+  try{lang=localStorage.getItem("lang")||""}catch(e){}
+  if(lang!=="en"&&lang!=="es"){lang=(navigator.language||"en").toLowerCase().indexOf("es")===0?"es":"en"}
+
+  function $all(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+
+  function links(){
+    var t=T[lang];
+    $all("[data-wa]").forEach(function(a){a.href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(t.waText);a.target="_blank";a.rel="noopener"});
+    $all("[data-mail]").forEach(function(a){a.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent(t.inqSubj);if(!a.getAttribute("data-es"))a.textContent=a.textContent.trim()?a.textContent:CONFIG.email});
+    $all("[data-book]").forEach(function(a){
+      if(CONFIG.calendarUrl){a.href=CONFIG.calendarUrl;a.target="_blank";a.rel="noopener"}
+      else if(a.closest("#audit")){a.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent(t.bookSubj)+"&body="+encodeURIComponent(t.bookBody)}
+    });
+  }
+
+  function apply(){
+    $all("[data-es]").forEach(function(el){
+      if(el.getAttribute("data-en")===null)el.setAttribute("data-en",el.innerHTML);
+      el.innerHTML=(lang==="es")?el.getAttribute("data-es"):el.getAttribute("data-en");
+    });
+    var t=T[lang];
+    document.documentElement.lang=lang;
+    document.title=t.title;
+    var m=document.querySelector('meta[name="description"]');if(m)m.setAttribute("content",t.desc);
+    document.getElementById("langBtn").textContent=t.btn;
+    links();
+  }
+
+  document.getElementById("langBtn").addEventListener("click",function(){
+    lang=(lang==="en")?"es":"en";
+    try{localStorage.setItem("lang",lang)}catch(e){}
+    apply();
+  });
+
+  document.getElementById("leadForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    var f=e.target,d=new FormData(f),msg=document.getElementById("formMsg"),t=T[lang];
+    if(CONFIG.formEndpoint){
+      fetch(CONFIG.formEndpoint,{method:"POST",body:d,headers:{Accept:"application/json"}})
+        .then(function(r){if(!r.ok)throw 0;f.reset();msg.textContent=t.ok})
+        .catch(function(){msg.textContent=t.err});
+    }else{
+      var body=t.lName+d.get("name")+"\n"+t.lEmail+d.get("email")+"\n"+t.lCo+d.get("company")+"\n"+t.lSize+d.get("size")+"\n"+t.lSink+d.get("sink")+"\n"+t.lNotes+d.get("notes");
+      location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent(t.formSubj+d.get("name"))+"&body="+encodeURIComponent(body);
+    }
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>
