@@ -8,6 +8,12 @@
 <meta property="og:title" content="AIWorker365 — AI automation for small businesses">
 <meta property="og:description" content="Cut busywork with practical AI automations built for small businesses.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://aiworker365.com/">
+<meta property="og:site_name" content="AIWorker365">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://aiworker365.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='43' font-size='30' font-weight='800' text-anchor='middle' fill='white' font-family='Arial'%3EAI%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"AIWorker365","url":"https://aiworker365.com/","email":"hello@aiworker365.com","description":"AI automation for small businesses: lead follow-up, customer messages, reporting and ops workflows.","areaServed":["Mexicali","Calexico","El Centro","San Luis R\u00edo Colorado","Yuma"],"address":{"@type":"PostalAddress","addressLocality":"Mexicali","addressRegion":"B.C.","addressCountry":"MX"},"availableLanguage":["English","Spanish"]}</script>
 <style>
 :root{--bg:#fff;--fg:#14181f;--muted:#5a6472;--line:#e4e8ee;--brand:#2563eb;--brand-d:#1d4ed8;--soft:#f4f7fb;--ok:#059669}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1116;--fg:#eef1f5;--muted:#9aa5b4;--line:#242b36;--soft:#151a22}}
@@ -42,6 +48,15 @@ input,select,textarea{font:inherit;padding:11px 12px;border:1px solid var(--line
 footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 #privacy{font-size:14px;color:var(--muted)}#privacy h3{color:var(--fg)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tab{background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.chat{max-width:520px;margin-top:18px;border:1px solid var(--line);border-radius:16px;padding:16px;background:var(--bg);display:grid;gap:10px}
+.msg{padding:10px 14px;border-radius:14px;font-size:15px;max-width:88%;line-height:1.45}
+.msg.bot{background:var(--soft);border:1px solid var(--line);justify-self:start;border-bottom-left-radius:4px}
+.msg.cli{background:var(--brand);color:#fff;justify-self:end;border-bottom-right-radius:4px}
+.msg small{display:block;opacity:.7;font-size:11px;margin-bottom:2px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.panel[hidden]{display:none}
 @media(max-width:640px){nav .hide{display:none}.about{grid-template-columns:1fr}}
 </style>
 </head>
@@ -50,6 +65,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <a class="logo" href="#top">AI<span>Worker</span>365</a>
 <nav>
 <a class="hide" href="#services" data-es="Servicios">Services</a>
+<a class="hide" href="#demo" data-es="Ejemplos">Examples</a>
 <a class="hide" href="#process" data-es="Proceso">Process</a>
 <a class="hide" href="#pricing" data-es="Precios">Pricing</a>
 <a class="hide" href="#about" data-es="Acerca de">About</a>
@@ -96,7 +112,42 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <div class="card"><h3 data-es="Integraciones a medida">Custom integrations</h3><p data-es="Conecta las herramientas que ya pagas en un solo flujo confiable.">Connect the tools you already pay for into one reliable flow.</p><ul><li data-es="Sin código + código a medida">No-code + custom code</li><li data-es="Conexiones API seguras">Secure API connections</li><li data-es="Pasos de aprobación humana">Human approval steps</li></ul></div>
 </div></div></section>
 
-<section id="process"><div class="wrap">
+<section id="demo"><div class="wrap">
+<div class="eyebrow" data-es="Ejemplos">Examples</div>
+<h2 data-es="Así se ve en tu negocio">What it looks like in your business</h2>
+<p class="lead" data-es="Ejemplos ilustrativos de mensajes automáticos. Tú apruebas el texto y cuándo se envía. No son resultados de clientes.">Illustrative examples of automated messages. You approve the wording and when it sends. These are not client results.</p>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" type="button" data-tab="ins" aria-selected="true" data-es="Seguros">Insurance</button>
+<button class="tab" role="tab" type="button" data-tab="rest" aria-selected="false" data-es="Restaurantes">Restaurants</button>
+<button class="tab" role="tab" type="button" data-tab="re" aria-selected="false" data-es="Bienes raíces">Real estate</button>
+</div>
+<div class="panel" id="p-ins">
+<div class="chat">
+<div class="msg bot"><small data-es="Tu negocio (automático)">Your business (automatic)</small><span data-es="Hola María, tu póliza vence en 15 días. ¿Quieres que te preparemos la renovación? Responde SÍ y te llamamos.">Hi Maria, your policy expires in 15 days. Want us to prepare the renewal? Reply YES and we'll call you.</span></div>
+<div class="msg cli"><span data-es="SÍ, por favor">YES, please</span></div>
+<div class="msg bot"><small data-es="Tu negocio (automático)">Your business (automatic)</small><span data-es="Perfecto. Te avisamos al equipo y te mandamos la lista de documentos pendientes.">Great. We've alerted the team and will send you the list of missing documents.</span></div>
+</div>
+<p class="note" data-es="Detrás: una hoja de clientes con fechas de vencimiento, un recordatorio programado y una alerta para tu equipo.">Behind it: a client sheet with expiry dates, a scheduled reminder and an alert to your team.</p>
+</div>
+<div class="panel" id="p-rest" hidden>
+<div class="chat">
+<div class="msg cli"><span data-es="¿Abren hoy? ¿Tienen mesa para 6 a las 8?">Are you open today? Table for 6 at 8?</span></div>
+<div class="msg bot"><small data-es="Tu negocio (automático)">Your business (automatic)</small><span data-es="¡Hola! Hoy abrimos de 1 a 10 pm. Dejé tu solicitud de mesa para 6 a las 8:00 pm; el encargado la confirma en unos minutos.">Hi! We're open 1–10 pm today. I've logged your request for 6 at 8:00 pm; the manager will confirm within minutes.</span></div>
+</div>
+<p class="note" data-es="Detrás: respuestas a preguntas comunes (horario, menú, ubicación) y un aviso al encargado para lo que requiere decisión humana.">Behind it: answers to common questions (hours, menu, location) and a hand-off to the manager for anything that needs a human decision.</p>
+</div>
+<div class="panel" id="p-re" hidden>
+<div class="chat">
+<div class="msg cli"><span data-es="Me interesa la casa de la calle Reforma">I'm interested in the house on Reforma St</span></div>
+<div class="msg bot"><small data-es="Tu negocio (automático)">Your business (automatic)</small><span data-es="¡Gracias! Te registré. ¿Buscas comprar o rentar, y cuál es tu presupuesto aproximado?">Thanks! You're on our list. Are you looking to buy or rent, and what's your rough budget?</span></div>
+<div class="msg bot"><small data-es="3 días después (automático)">3 days later (automatic)</small><span data-es="Hola, ¿sigues interesado? Si quieres, agendamos una visita esta semana.">Hi, still interested? If you like, we can schedule a viewing this week.</span></div>
+</div>
+<p class="note" data-es="Detrás: cada prospecto queda en una sola lista y recibe seguimiento a tiempo, incluso cuando estás ocupado.">Behind it: every lead lands on one list and gets a timely follow-up, even when you're busy.</p>
+</div>
+<div class="ctas"><a class="btn" data-book href="#audit" data-es="Quiero algo así">I want something like this</a></div>
+</div></section>
+
+<section id="process" class="soft"><div class="wrap">
 <div class="eyebrow" data-es="Cómo funciona">How it works</div>
 <h2 data-es="De la primera llamada a una automatización funcionando en unas 2–4 semanas">From first call to working automation in about 2–4 weeks</h2>
 <div class="grid g4">
@@ -106,7 +157,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <div class="card"><h3 data-es="4. Entrega">4. Hand-off</h3><p data-es="Documentación y una llamada de capacitación para que tu equipo pueda operarlo.">Documentation and a training call so your team can run it.</p></div>
 </div></div></section>
 
-<section id="pricing" class="soft"><div class="wrap">
+<section id="pricing"><div class="wrap">
 <div class="eyebrow" data-es="Precios">Pricing</div>
 <h2 data-es="Paquetes claros, cotización fija">Clear packages, fixed quotes</h2>
 <p class="lead" data-es="Estos son precios de partida. Tu auditoría gratis termina con una cotización fija, sin sorpresas en la factura.">These are starting prices. Your free audit ends with a fixed quote, so there are no surprise invoices.</p>
@@ -119,7 +170,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <p class="note" style="margin-top:16px" data-es="Precios en USD. Las suscripciones de software de terceros (CRM, plataformas de automatización, uso de IA) son aparte y las cobran esos proveedores.">Prices in USD. Third-party software subscriptions (CRM, automation platforms, AI usage) are separate and billed by those providers.</p>
 </div></section>
 
-<section id="about"><div class="wrap">
+<section id="about" class="soft"><div class="wrap">
 <div class="eyebrow" data-es="Acerca de">About</div>
 <div class="about">
 <div class="avatar" aria-hidden="true">E</div>
@@ -127,7 +178,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <p class="lead" style="margin:0" data-es="Trabajo en operaciones de retail, así que sé de primera mano cuánto tiempo pierden los equipos pequeños en seguimientos manuales, hojas de cálculo y tareas administrativas repetitivas. Creé AIWorker365 para construir automatizaciones simples y confiables que te devuelvan ese tiempo. Cuando contactas al negocio, hablas directamente conmigo.">I work in retail operations, so I know firsthand how much time small teams lose to manual follow-ups, spreadsheets and repetitive admin. I started AIWorker365 to build simple, reliable automations that give that time back. When you contact the business, you talk directly to me.</p></div>
 </div></div></section>
 
-<section id="faq" class="soft"><div class="wrap">
+<section id="faq"><div class="wrap">
 <div class="eyebrow" data-es="Preguntas frecuentes">FAQ</div>
 <h2 data-es="Preguntas comunes">Common questions</h2>
 <details><summary data-es="¿Necesitamos un equipo técnico?">Do we need a technical team?</summary><p data-es="No. Si sabes usar correo, WhatsApp o una hoja de cálculo, puedes operar lo que construyo, y te capacito para ello.">No. If you can use email, WhatsApp or a spreadsheet, you can run what I build, and I train you on it.</p></details>
@@ -148,6 +199,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <label><span data-es="Tu nombre">Your name</span><input name="name" required></label>
 <label><span data-es="Correo de trabajo">Work email</span><input name="email" type="email" required></label>
 <label><span data-es="Empresa">Company</span><input name="company"></label>
+<label><span data-es="WhatsApp o teléfono (opcional)">WhatsApp or phone (optional)</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel"></label>
+<label><span data-es="Tipo de negocio">Type of business</span><select name="btype"><option value="" data-es="Selecciona…">Select…</option><option data-es="Seguros">Insurance</option><option data-es="Restaurante">Restaurant</option><option data-es="Bienes raíces">Real estate</option><option data-es="Tienda / comercio">Store / retail</option><option data-es="Oficina / servicios">Office / services</option><option data-es="Otro">Other</option></select></label>
 <label><span data-es="Tamaño del equipo">Team size</span><select name="size"><option value="" data-es="Selecciona…">Select…</option><option data-es="1–5 personas">1–5 people</option><option data-es="6–20 personas">6–20 people</option><option data-es="21–50 personas">21–50 people</option><option data-es="51–200 personas">51–200 people</option><option data-es="Más de 200 personas">200+ people</option></select></label>
 <label><span data-es="Lo que más tiempo me quita">Biggest time sink</span><select name="sink"><option value="" data-es="Selecciona…">Select…</option><option data-es="El seguimiento de prospectos es lento o inconsistente">Lead follow-up is slow or inconsistent</option><option data-es="La atención al cliente toma demasiado tiempo">Customer support takes too much time</option><option data-es="Los reportes / la administración son manuales">Reporting / admin is manual</option><option data-es="Muchas herramientas que no se comunican entre sí">Too many tools that don't talk to each other</option><option data-es="Necesito IA para contenido / propuestas / documentos">Need AI for content / proposals / docs</option><option data-es="Otro / aún no estoy seguro">Other / not sure yet</option></select></label>
 <label><span data-es="¿Algo más? (opcional)">Anything else? (optional)</span><textarea name="notes" rows="3"></textarea></label>
@@ -189,7 +242,7 @@ var CONFIG = {
       bookBody:"Hi,\n\nI'd like to book a 20-minute free automation audit call.\n\nPreferred days/times:\n\nTimezone:\n\nThanks",
       inqSubj:"AIWorker365 inquiry",
       formSubj:"Audit request — ",
-      lName:"Name: ",lEmail:"Email: ",lCo:"Company: ",lSize:"Team size: ",lSink:"Biggest time sink: ",lNotes:"Notes: ",
+      lName:"Name: ",lEmail:"Email: ",lCo:"Company: ",lPhone:"WhatsApp/phone: ",lType:"Business type: ",lSize:"Team size: ",lSink:"Biggest time sink: ",lNotes:"Notes: ",
       ok:"Thanks! I'll reply within 1 business day.",
       err:"Something went wrong. Please email "+CONFIG.email+" or use WhatsApp."
     },
@@ -202,7 +255,7 @@ var CONFIG = {
       bookBody:"Hola,\n\nMe gustaría agendar una llamada de auditoría de automatización gratis de 20 minutos.\n\nDías/horarios preferidos:\n\nZona horaria:\n\nGracias",
       inqSubj:"Consulta AIWorker365",
       formSubj:"Solicitud de auditoría — ",
-      lName:"Nombre: ",lEmail:"Correo: ",lCo:"Empresa: ",lSize:"Tamaño del equipo: ",lSink:"Lo que más tiempo quita: ",lNotes:"Notas: ",
+      lName:"Nombre: ",lEmail:"Correo: ",lCo:"Empresa: ",lPhone:"WhatsApp/teléfono: ",lType:"Tipo de negocio: ",lSize:"Tamaño del equipo: ",lSink:"Lo que más tiempo quita: ",lNotes:"Notas: ",
       ok:"¡Gracias! Te respondo en 1 día hábil.",
       err:"Algo salió mal. Escríbeme a "+CONFIG.email+" o usa WhatsApp."
     }
@@ -210,6 +263,9 @@ var CONFIG = {
   var lang="en";
   try{lang=localStorage.getItem("lang")||""}catch(e){}
   if(lang!=="en"&&lang!=="es"){lang=(navigator.language||"en").toLowerCase().indexOf("es")===0?"es":"en"}
+  /* deep links: aiworker365.com/?lang=es or /#es force the language */
+  var forced=(location.search.match(/[?&]lang=(en|es)\b/)||[])[1]||((location.hash.match(/^#(en|es)$/)||[])[1]);
+  if(forced){lang=forced}
 
   function $all(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
 
@@ -250,13 +306,21 @@ var CONFIG = {
         .then(function(r){if(!r.ok)throw 0;f.reset();msg.textContent=t.ok})
         .catch(function(){msg.textContent=t.err});
     }else{
-      var body=t.lName+d.get("name")+"\n"+t.lEmail+d.get("email")+"\n"+t.lCo+d.get("company")+"\n"+t.lSize+d.get("size")+"\n"+t.lSink+d.get("sink")+"\n"+t.lNotes+d.get("notes");
+      var body=t.lName+d.get("name")+"\n"+t.lEmail+d.get("email")+"\n"+t.lCo+d.get("company")+"\n"+t.lPhone+d.get("phone")+"\n"+t.lType+d.get("btype")+"\n"+t.lSize+d.get("size")+"\n"+t.lSink+d.get("sink")+"\n"+t.lNotes+d.get("notes");
       location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent(t.formSubj+d.get("name"))+"&body="+encodeURIComponent(body);
     }
+  });
+
+  $all(".tab").forEach(function(b){
+    b.addEventListener("click",function(){
+      $all(".tab").forEach(function(x){x.setAttribute("aria-selected",x===b?"true":"false")});
+      ["ins","rest","re"].forEach(function(k){document.getElementById("p-"+k).hidden=(k!==b.getAttribute("data-tab"))});
+    });
   });
 
   apply();
 })();
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
